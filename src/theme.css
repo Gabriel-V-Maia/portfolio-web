@@ -212,8 +212,7 @@ body {
 .c-sec  { background: var(--bdg-sec); color: var(--bdg-sec-c); }
 
 .socials {
-  margin-top: auto;
-  padding-top: 2.5rem;
+  margin-top: 1rem;
   display: flex;
   flex-direction: column;
   gap: 9px;
