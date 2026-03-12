@@ -302,6 +302,7 @@ body {
   position: relative;
   padding-left: 1.1rem;
   margin-bottom: 2.4rem;
+  flex-direction: column;
 }
 
 .tl-item::before {
@@ -317,6 +318,7 @@ body {
 }
 
 .tl-date {
+  padding: 3px;
   font-size: .65rem;
   font-weight: 400;
   letter-spacing: .07em;
@@ -467,6 +469,25 @@ body {
   cursor: pointer;
   transition: border-color .2s, transform .15s;
   flex-shrink: 0;
+}
+
+.cert-row{
+  display:flex;
+  gap:16px;
+  align-items:flex-start;
+}
+
+.cert-picture{
+  flex-shrink:0;
+}
+
+.cert-picture img{
+  width:70px;
+  height:70px;
+  background-color: var(--cream-d);
+  padding: 5px;
+  border-radius: 5px;
+  object-fit:contain;
 }
 
 .sw-btn:hover { transform: scale(1.15); }
