@@ -13,6 +13,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="theme.css"/>
+
 </head>
 <body>
 
@@ -43,7 +44,7 @@
     <div class="left-rule" role="separator"></div>
 
     <p class="bio">
-      Gosto de entender sistemas no nível mais baixo possível. Foco no back-end e segurança -- mas capaz de atuar em toda a stack. Programo com paixão dentro dos recursos disponíveis.
+      Gosto de entender sistemas no nível mais baixo possível. Foco no back-end e segurança - mas capaz de atuar em toda a stack. Programo com paixão dentro dos recursos disponíveis.
     </p>
 
     <div class="badges-group" aria-label="Linguagens de programação">
@@ -96,7 +97,6 @@
         <span class="bdg"><span class="bdg-l">sec</span><span class="bdg-r c-sec">IDA Pro</span></span>
       </div>
     </div>
-
 
     <div class="avatar-wrap" aria-hidden="true">
       <div class="avatar-circle">
@@ -152,67 +152,53 @@
           <h3 class="tl-title">Técnico em Análise e Desenvolvimento de Sistemas</h3>
           <p class="tl-co">SENAI/SC — Serviço Nacional de Aprendizagem Industrial</p>
           <p class="tl-desc">Formação técnica cobrindo engenharia de software, banco de dados, redes e segurança da informação.</p>
-        </article >
+        </article>
 
-      <article class="tl-item">
-        <time class="tl-date" datetime="2025-08">Emitido Ago 2025</time>
-
-        <div class="cert-row">
-
-          <a href="">
+        <article class="tl-item">
+          <time class="tl-date" datetime="2025-08">Emitido Ago 2025</time>
+          <div class="cert-row">
             <div class="cert-picture">
               <div class="logo">
                 <img src="./assets/network_defense.png">
               </div>
             </div>
-          </a>
-
-          <div class="cert-info">
-            <h3 class="tl-title">Network Defense</h3>
-            <p class="tl-co">Cisco · Cisco Networking Academy</p>
-            <p class="tl-desc">
-              Certificado ao completar o curso de defesa de redes.
-              Abrange Network Security & Network Defense.
-            </p>
-
-            <div class="tag-row">
-              <span class="bdg-lt"><span class="ll">cert</span><span class="lr">Network Security</span></span>
-              <span class="bdg-lt"><span class="ll">cert</span><span class="lr">Network Defense</span></span>
+            <div class="cert-info">
+              <h3 class="tl-title">Network Defense</h3>
+              <p class="tl-co">Cisco · Cisco Networking Academy</p>
+              <p class="tl-desc">
+                Certificado ao completar o curso de defesa de redes.
+                Abrange Network Security &amp; Network Defense.
+              </p>
+              <div class="tag-row">
+                <span class="bdg-lt"><span class="ll">cert</span><span class="lr">Network Security</span></span>
+                <span class="bdg-lt"><span class="ll">cert</span><span class="lr">Network Defense</span></span>
+              </div>
             </div>
           </div>
+        </article>
 
-        </div>
-      </article>
-
-      <article class="tl-item">
-        <time class="tl-date" datetime="2025-08">Emitido Ago 2025</time>
-
-        <div class="cert-row">
-
-          <a href="">
+        <article class="tl-item">
+          <time class="tl-date" datetime="2025-08">Emitido Ago 2025</time>
+          <div class="cert-row">
             <div class="cert-picture">
               <div class="logo">
                 <img src="./assets/endpoint_security.png">
               </div>
             </div>
-          </a>
-
-          <div class="cert-info">
-            <h3 class="tl-title">Segurança de Endpoints</h3>
-            <p class="tl-co">Cisco · Segurança de Endpoint</p>
-            <p class="tl-desc">
-              Certificado ao completar o curso de segurança de endpoints.
-            </p>
-
-            <div class="tag-row">
-              <span class="bdg-lt"><span class="ll">cert</span><span class="lr">Network Security</span></span>
-              <span class="bdg-lt"><span class="ll">cert</span><span class="lr">Network Defense</span></span>
+            <div class="cert-info">
+              <h3 class="tl-title">Segurança de Endpoints</h3>
+              <p class="tl-co">Cisco · Segurança de Endpoint</p>
+              <p class="tl-desc">
+                Certificado ao completar o curso de segurança de endpoints.
+              </p>
+              <div class="tag-row">
+                <span class="bdg-lt"><span class="ll">cert</span><span class="lr">Network Security</span></span>
+                <span class="bdg-lt"><span class="ll">cert</span><span class="lr">Network Defense</span></span>
+              </div>
             </div>
           </div>
+        </article>
 
-        </div>
-      </article>
-        
       </div>
     </section>
 
@@ -237,6 +223,12 @@
 
 </div>
 
+<div id="cert-overlay">
+  <div id="cert-overlay-inner">
+    <img id="cert-overlay-img" src="" alt="">
+  </div>
+</div>
+
 <script>
   const btns = document.querySelectorAll('.sw-btn');
   btns.forEach(btn => {
@@ -252,11 +244,62 @@
     entries.forEach((e, i) => {
       if (e.isIntersecting) {
         setTimeout(() => e.target.classList.add('visible'), i * 110);
-        io.unobserve(e.target);     
+        io.unobserve(e.target);
       }
     });
   }, { threshold: 0.05 });
   document.querySelectorAll('.section').forEach(el => io.observe(el));
+
+  const overlay = document.getElementById('cert-overlay');
+  const overlayImg = document.getElementById('cert-overlay-img');
+
+  document.querySelectorAll('.cert-picture').forEach(pic => {
+    const MAX_X = 18;
+    const MAX_Y = 22;
+    const MAX_Z = 6;
+
+    pic.addEventListener('mousemove', (e) => {
+      const rect = pic.getBoundingClientRect();
+      const nx = ((e.clientX - rect.left) / rect.width  - 0.5) * 2;
+      const ny = ((e.clientY - rect.top)  / rect.height - 0.5) * 2;
+      pic.style.transform = `perspective(400px) rotateX(${ny*MAX_X}deg) rotateY(${-nx*MAX_Y}deg) rotateZ(${nx*MAX_Z}deg) scale(1.06)`;
+    });
+
+    pic.addEventListener('mouseleave', () => {
+      pic.style.transform = 'perspective(400px) rotateX(14deg) rotateY(-10deg) rotateZ(5deg)';
+    });
+
+    pic.addEventListener('click', () => {
+      const img = pic.querySelector('img');
+      overlayImg.src = img.src;
+      overlayImg.alt = img.alt;
+      overlay.classList.add('open');
+    });
+  });
+
+  overlay.addEventListener('click', () => {
+    overlay.classList.remove('open');
+  });
+
+  document.getElementById('cert-overlay-inner').addEventListener('mousemove', (e) => {
+    const el = document.getElementById('cert-overlay-inner');
+    el.classList.add('tilting');
+    const rect = el.getBoundingClientRect();
+    const nx = ((e.clientX - rect.left) / rect.width  - 0.5) * 2;
+    const ny = ((e.clientY - rect.top)  / rect.height - 0.5) * 2;
+    el.style.transform = `perspective(600px) rotateX(${ny*18}deg) rotateY(${-nx*22}deg) rotateZ(${nx*5}deg) scale(1)`;
+    e.stopPropagation();
+  });
+
+  document.getElementById('cert-overlay-inner').addEventListener('mouseleave', () => {
+    const el = document.getElementById('cert-overlay-inner');
+    el.classList.remove('tilting');
+    el.style.transform = 'perspective(600px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(1)';
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') overlay.classList.remove('open');
+  });
 </script>
 
 </body>
