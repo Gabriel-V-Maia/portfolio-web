@@ -13,7 +13,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="theme.css"/>
-
 </head>
 <body>
 
@@ -44,8 +43,25 @@
     <div class="left-rule" role="separator"></div>
 
     <p class="bio">
-      Gosto de entender sistemas no nível mais baixo possível. Foco no back-end e segurança - mas capaz de atuar em toda a stack. Programo com paixão dentro dos recursos disponíveis.
+      Gosto de entender sistemas no nível mais baixo possível. Foco no back-end e segurança — mas capaz de atuar em toda a stack. Programo com paixão dentro dos recursos disponíveis.
     </p>
+
+    <div class="gh-stats">
+      <div class="stat-item">
+        <span class="stat-num">36</span>
+        <span class="stat-label">Repositórios</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">490+</span>
+        <span class="stat-label">Contribuições/ano</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">10</span>
+        <span class="stat-label">Linguagens</span>
+      </div>
+    </div>
+
+    <div class="left-rule" role="separator"></div>
 
     <div class="badges-group" aria-label="Linguagens de programação">
       <p class="badges-label">Linguagens</p>
@@ -109,6 +125,140 @@
 
   <main class="right">
 
+    <section class="hero-quick">
+      <h2 class="hero-title">Full-Stack Developer · Pentester · Systems Architect</h2>
+      <p class="hero-desc">
+        Especializado em <strong>back-end</strong> e <strong>cybersecurity</strong>.
+        Atualmente focado em reverse engineering, pentesting e arquitetura de sistemas seguros.
+      </p>
+      <div class="hero-cta">
+        <a href="https://github.com/Gabriel-V-Maia" target="_blank" class="cta-btn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.387.6.11.82-.26.82-.577v-2.165c-3.338.726-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.09-.745.083-.729.083-.729 1.205.085 1.84 1.237 1.84 1.237 1.07 1.834 2.807 1.304 3.492.997.108-.775.418-1.305.762-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.468-2.38 1.236-3.22-.124-.303-.536-1.523.117-3.176 0 0 1.008-.322 3.3 1.23A11.5 11.5 0 0 1 12 6.803c1.02.005 2.047.138 3.006.404 2.29-1.552 3.297-1.23 3.297-1.23.655 1.653.243 2.873.12 3.176.77.84 1.235 1.91 1.235 3.22 0 4.61-2.807 5.625-5.479 5.92.43.372.814 1.102.814 2.222v3.293c0 .32.216.694.824.576C20.565 21.796 24 17.298 24 12c0-6.63-5.37-12-12-12z"/></svg>
+          Ver GitHub
+        </a>
+        <button id="btn-contato" class="cta-btn cta-outline">Contato</button>
+      </div>
+    </section>
+
+    <hr class="vintage-rule"/>
+
+    <section class="section" aria-labelledby="proj-heading">
+      <p class="eyebrow" aria-hidden="true">Portfólio</p>
+      <h2 id="proj-heading" class="sh">Projetos em Destaque</h2>
+      
+      <div class="proj-grid">
+        
+        <article class="proj-card">
+          <div class="proj-header">
+            <h3 class="proj-title">
+              <a href="https://github.com/Gabriel-V-Maia/portugolOS" target="_blank">portugolOS</a>
+            </h3>
+            <span class="proj-stars">★ 2</span>
+          </div>
+          <p class="proj-desc">Kernel educacional desenvolvido em C para a linguagem Portugol.</p>
+          <div class="proj-tech">
+            <span class="tech-tag t-c">C</span>
+            <span class="tech-tag t-asm">Assembly</span>
+            <span class="tech-tag t-os">OS Dev</span>
+          </div>
+          <div class="proj-meta">
+            <span class="meta-item">MIT License</span>
+          </div>
+        </article>
+
+        <article class="proj-card">
+          <div class="proj-header">
+            <h3 class="proj-title">
+              <a href="https://github.com/Gabriel-V-Maia/Interpretador-Portugol" target="_blank">Interpretador Portugol</a>
+            </h3>
+          </div>
+          <p class="proj-desc">Interpretador completo para Portugol escrito em C puro. Lexer, parser e visitor implementados do zero com foco em performance.</p>
+          <div class="proj-tech">
+            <span class="tech-tag t-c">C</span>
+            <span class="tech-tag t-compiler">Compiler Design</span>
+          </div>
+          <div class="proj-meta">
+            <span class="meta-item">MIT License</span>
+          </div>
+        </article>
+
+        <article class="proj-card">
+          <div class="proj-header">
+            <h3 class="proj-title">
+              <a href="https://github.com/Gabriel-V-Maia/EduQR" target="_blank">EduQR</a>
+            </h3>
+            <span class="proj-stars">★ 1</span>
+          </div>
+          <p class="proj-desc">Sistema de geração de bilhetes com QR Code para uso escolar. Interface em Python com Tkinter</p>
+          <div class="proj-tech">
+            <span class="tech-tag t-py">Python</span>
+            <span class="tech-tag t-qr">QR Code</span>
+            <span class="tech-tag t-pdf">PDF Gen</span>
+          </div>
+          <div class="proj-meta">
+            <span class="meta-item">BSD-3-Clause</span>
+          </div>
+        </article>
+
+        <article class="proj-card">
+          <div class="proj-header">
+            <h3 class="proj-title">
+              <a href="https://github.com/Gabriel-V-Maia/issueboard" target="_blank">IssueBoard</a>
+            </h3>
+            <span class="proj-stars">★ 1</span>
+          </div>
+          <p class="proj-desc">Task manager minimalista integrado com GitHub Issues.</p>
+          <div class="proj-tech">
+            <span class="tech-tag t-py">Python</span>
+            <span class="tech-tag t-api">GitHub API</span>
+          </div>
+          <div class="proj-meta">
+            <span class="meta-item">MIT License</span>
+          </div>
+        </article>
+
+        <article class="proj-card">
+          <div class="proj-header">
+            <h3 class="proj-title">
+              <a href="https://github.com/Gabriel-V-Maia/bot-ctfd" target="_blank">bot-ctfd</a>
+            </h3>
+          </div>
+          <p class="proj-desc">Bot Discord para tracking automático de desafios postados em plataformas feitas com CTFd</p>
+          <div class="proj-tech">
+            <span class="tech-tag t-py">Python</span>
+            <span class="tech-tag t-discord">Discord.py</span>
+            <span class="tech-tag t-ctf">CTF</span>
+          </div>
+          <div class="proj-meta">
+            <span class="meta-item">BSD-3-Clause</span>
+          </div>
+        </article>
+
+        <article class="proj-card">
+          <div class="proj-header">
+            <h3 class="proj-title">
+              <a href="https://github.com/Gabriel-V-Maia/reposcape" target="_blank">RepoScape</a>
+            </h3>
+          </div>
+          <p class="proj-desc">Visualize seus repositórios GitHub como uma cidade 3D.</p>
+          <div class="proj-tech">
+            <span class="tech-tag t-js">JavaScript</span>
+            <span class="tech-tag t-3d">Three.js</span>
+            <span class="tech-tag t-viz">Data Viz</span>
+          </div>
+          <div class="proj-meta">
+          </div>
+        </article>
+
+      </div>
+
+      <a href="https://github.com/Gabriel-V-Maia?tab=repositories" target="_blank" class="view-all">
+        Ver todos os 36 repositórios →
+      </a>
+    </section>
+
+    <hr class="vintage-rule"/>
+
     <section class="section" aria-labelledby="exp-heading">
       <p class="eyebrow" aria-hidden="true">Trajetória</p>
       <h2 id="exp-heading" class="sh">Experiência</h2>
@@ -160,7 +310,7 @@
           <div class="cert-row">
             <div class="cert-picture">
               <div class="logo">
-                <img src="./assets/network_defense.png">
+                <img src="./assets/network_defense.png" alt="Certificado Network Defense">
               </div>
             </div>
             <div class="cert-info">
@@ -183,7 +333,7 @@
           <div class="cert-row">
             <div class="cert-picture">
               <div class="logo">
-                <img src="./assets/endpoint_security.png">
+                <img src="./assets/endpoint_security.png" alt="Certificado Endpoint Security">
               </div>
             </div>
             <div class="cert-info">
@@ -193,8 +343,8 @@
                 Certificado ao completar o curso de segurança de endpoints.
               </p>
               <div class="tag-row">
-                <span class="bdg-lt"><span class="ll">cert</span><span class="lr">Network Security</span></span>
-                <span class="bdg-lt"><span class="ll">cert</span><span class="lr">Network Defense</span></span>
+                <span class="bdg-lt"><span class="ll">cert</span><span class="lr">Endpoint Security</span></span>
+                <span class="bdg-lt"><span class="ll">cert</span><span class="lr">Threat Detection</span></span>
               </div>
             </div>
           </div>
@@ -217,7 +367,7 @@
           <span class="seek-tag">Network Defense</span>
         </div>
       </div>
-      <p class="location-note">Joinville, SC · Aberto a remoto e presencial</p>
+      <p class="location-note">📍 Joinville, SC · Aberto a remoto e presencial</p>
     </section>
 
   </main>
@@ -227,6 +377,21 @@
 <div id="cert-overlay">
   <div id="cert-overlay-inner">
     <img id="cert-overlay-img" src="" alt="">
+  </div>
+</div>
+
+<div id="contact-overlay">
+  <div id="contact-modal">
+    <button id="close-contact">&times;</button>
+    <h3 class="sh" style="margin-bottom: 1rem;">Contato</h3>
+    <form name="contato" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+      <input type="hidden" name="destination" value="gabrielvinicius.damaiacontato@gmail.com" />
+      <p style="display: none;"><input name="bot-field" /></p>
+      <input type="text" name="nome" placeholder="Seu Nome" required>
+      <input type="email" name="email" placeholder="Seu Email" required>
+      <textarea name="mensagem" placeholder="Sua Mensagem" required></textarea>
+      <button type="submit" class="cta-btn">Enviar Mensagem</button>
+    </form>
   </div>
 </div>
 
@@ -298,8 +463,30 @@
     el.style.transform = 'perspective(600px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(1)';
   });
 
+  const contactOverlay = document.getElementById('contact-overlay');
+  const btnContato = document.getElementById('btn-contato');
+  const closeContact = document.getElementById('close-contact');
+
+  btnContato.addEventListener('click', (e) => {
+    e.preventDefault();
+    contactOverlay.classList.add('open');
+  });
+
+  closeContact.addEventListener('click', () => {
+    contactOverlay.classList.remove('open');
+  });
+
+  contactOverlay.addEventListener('click', (e) => {
+    if(e.target === contactOverlay) {
+      contactOverlay.classList.remove('open');
+    }
+  });
+
   document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') overlay.classList.remove('open');
+    if (e.key === 'Escape') {
+      overlay.classList.remove('open');
+      contactOverlay.classList.remove('open');
+    }
   });
 </script>
 
