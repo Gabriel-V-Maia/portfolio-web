@@ -915,3 +915,43 @@ button.cta-btn {
     padding: 2rem 1.5rem;
   }
 }
+
+.tabs-nav {
+  display: flex;
+  gap: 0;
+  border-bottom: 1px solid var(--clr-rule, #d0cfc8);
+  margin-bottom: 2rem;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.tabs-nav::-webkit-scrollbar { display: none; }
+
+.tab-btn {
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  padding: 0.55rem 1.1rem;
+  font-family: inherit;
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--clr-muted, #888);
+  cursor: pointer;
+  white-space: nowrap;
+  margin-bottom: -1px;
+  transition: color 0.15s, border-color 0.15s;
+}
+.tab-btn:hover { color: var(--clr-fg, #1a1a18); }
+.tab-btn.active {
+  color: var(--clr-fg, #1a1a18);
+  border-bottom-color: var(--clr-fg, #1a1a18);
+}
+
+.tab-panel { display: none; }
+.tab-panel.active { display: block; animation: tabfade 0.18s ease; }
+
+@keyframes tabfade {
+  from { opacity: 0; transform: translateY(4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
